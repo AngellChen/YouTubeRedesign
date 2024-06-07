@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Zhijing Chen Project2 Youtube Redesign</title>
+</head>
+<body>
+    <div class="background"><img src="img/background.svg" alt="background"></div>
+<div class="title">
+    <h1> <img src="img/arrow.svg" alt="Exit full screen">Headline 1</h1>
+</div>
+<video autoplay muted loop id="myVideo">
+    <source src="img/video.mp4" type="video/mp4">
+  </video>
+    <nav id="navBox">
+        <input type="checkbox" id="check">
+        <label for="check">
+          <i id="btn"><img src="img/dots-vertical.svg" alt="open the sidebar"></i>
+          <i id="cancel"><img src="img/dots-horizontal.svg" alt="close the sidebar"></i>
+        </label>
+     
+        <ul class="navigation">
+        <div class="item1">
+            <h1> </h1>
+        <h1 class="right">Setting</h1>
+    </div>
+    <div class="item2">
+        <div>
+        <h2>Caption</h2>
+    </div>
+    <div class="right">
+        <label class="switch" >
+        <input type="checkbox" class="caption" onClick="captionOnOff()">
+        <span class="slider round"></span>
+        </label>
+    </div>
+    <div class="item2">
+        <div>
+    <img src="img/T+.svg" id="Tincrease" alt="increase font size" onClick="sizeIncrease()">
+</div>
+<div class="right">
+    <img src="img/T-.svg" class="Tdecrease" alt="decrease font size" onClick="sizeDecrease()">
+</div>
+</div>
+    </div>
+        <h2>Colour</h2>
+        <div class="white-space item3">
+            <div>
+                <h3>Font</h3><br>        
+                <h3>Background</h3>
+    </div>
+    <div class="right">
+        <input type="color" id="colorpicker" class="white-space" value="#000000" onchange="textColor()">
+        <br><input type="color" id="backgroundcolor" value="#DEB887" onchange="backgroundColor()">
+    </div>
+    </div>
+<div class="white-space">
+    <h2>Font Type</h2>
+</div>
+<div class="select">
+<select id="selectFont" name="selectFont" onchange="updateFont();">
+    <option> Helvetica Neue </option>
+    <option> Times New Roman </option>
+    <option> Arial </option>                                  
+    <option> Verdana </option>                              
+  </select>
+  </div>
+    </ul>
+</nav>
+<div class="sideBar">
+<ul>
+    <li>
+        <img id="likeOff" src="img/like.svg" alt="Press to like the video" onClick="likeOnOff()">
+        <img id="likeOn" src="img/likeon.svg" alt="Press to cancel like the video" onClick="likeOnOff()">
+    </li>
+    <li>
+        <img id="ccOff" src="img/cc.svg" alt="Press to turn on the caption" onClick="captionOnOff()">
+        <img id="ccOn" src="img/ccon.svg" alt="Press to turn off the caption" onClick="captionOnOff()">
+    </li>
+    <li>
+        <img id="customOff" src="img/custom.svg" alt="Press to custom the caption" onclick="sidemenu()">
+    </li>
+    <li>
+        <img id="fixOff" src="img/fix.svg" alt="Press to fix the caption" onClick="fixOnOff()">
+        <img id="fixOn" src="img/fixon.svg" alt="Press to unfix the caption" onClick="fixOnOff()">
+    </li>
+</ul>
+</div>
+<div id="box">
+    <div class="boxHd"></div>
+    <div class="boxBd"><p id="captionContent">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p></div>
+</div>
+<div id="videoProgressBar"> <img src="img/Video progress bar.svg" alt="Video progress bar"></div>
+
+</body>
+<script src="script.js"></script>
+</html>

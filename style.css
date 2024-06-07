@@ -1,0 +1,237 @@
+.background img{
+    z-index: 999;
+    width: 100%;
+}
+#myVideo {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  z-index: -100;
+}
+h1{
+  margin-top: 0%;
+  font-size: 20px;
+  font-family: Calibri;
+}
+h2{
+  margin-top: -3%;
+  font-size: 16px;
+  font-family: Calibri;
+}
+h3{
+  font-size: 14px;
+  margin: 0%;
+  font-weight: normal;
+  font-family: Avenir;
+}
+p{
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+  transform: translate(0%, 100%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+#check{
+  display: none;
+}
+
+label #btn,label #cancel{
+  position: fixed;
+  right: 15px;
+  top:2rem;
+  z-index: 100;
+  cursor: pointer;
+  font-size: 3vw;
+  transition: all .5s ease;
+}
+
+label #cancel{
+  opacity: 0;
+  visibility: hidden;
+}
+
+#check:checked ~ .navigation{
+ right: 0;
+}
+#check:checked ~ label #btn{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#check:checked ~ label #cancel{
+  z-index: 200;
+  margin-right: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  bottom: 0;
+  z-index: 100;
+  text-align: left;
+  background-color:rgba(170, 66, 66, 0.8);
+  border-radius: 10%;
+  color: white;
+  }
+
+.right{
+  text-align: right;
+  margin-right: 3vw;
+  }
+.item1{
+  display: grid;
+  margin-top: 3vw;
+  grid-template-columns:150px 150px;
+}
+.item2{
+  display: grid;
+  margin-top: 0.5vw;
+  grid-template-columns:150px 150px;
+}
+
+.item3{
+  display: grid;
+  grid-template-columns:150px 150px;
+}
+.item2 img{
+  max-height: 50%;
+}
+.white-space{
+  margin-bottom: 8%;
+}
+.title img{
+  max-width: 2%;
+  margin-right: 1%;
+}
+#selectFont{
+  transform: translate(50%, -50%);
+}
+
+#box {
+  position: absolute;
+  transform: translate(5%, 200%);
+  display: none;
+}
+.boxHd {
+  width: 800px;
+  height: 20px;
+  background-color: rgba(255, 248, 220, 0.8);
+  cursor: move;
+}
+.boxBd {
+  width: 800px;
+  height: 80px;
+  background-color: rgba(255, 254, 242, 0.8);
+}
+#videoProgressBar{
+  position: fixed;
+  bottom: 0;
+  transform: translate(5%, 0);
+}
+#videoProgressBar img{
+  max-width: 800px;
+}
+.sideBar ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(222, 184, 135, 0.5);
+}
+.sideBar{
+  margin-top:10%;
+  padding:0 0 0 0;
+  float:right;
+  width:4vw;
+  border: solid rgba(222, 184, 135, 0.5) 8px;
+  border-radius: 15px;
+}
+.sideBar img{
+max-width: 4vw;
+text-align: center;
+}
+#likeOn{
+  display: none;
+  margin-bottom: 20%;
+}
+#likeOff{
+  margin-bottom: 15%;
+}
+#ccOn{
+  display: none;
+  margin-bottom: 20%;
+}
+#ccOff{
+  margin-bottom: 10%;
+}
+#fixOn{
+  display: none;
+}
+
+/* Start of code from https://www.w3schools.com/howto/howto_css_switch.asp */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4vw;
+  height: 2vw;
+  top: -15%;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 2.2vw;
+  width: 2.2vw;
+  right: 50%;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #DEB887;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #DEB887;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(2.2vw);
+  -ms-transform: translateX(2.2vw);
+  transform: translateX(2.2vw);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* End of code from https://www.w3schools.com/howto/howto_css_switch.asp */
